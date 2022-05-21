@@ -22,7 +22,6 @@ module.exports.getUser = (req, res) => {
   User.findOne({
     _id: id,
   })
-    .select(["-_id"])
     .then((user) => {
       res.json(user);
     })
